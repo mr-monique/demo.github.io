@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use './breakpoints' as bp;
+@use './fonts';
+@use './color' as vars;
+
+%headerCta {
+    width: 170px;
+    height: 40px;
+    border: 2px solid vars.$colorAccent;
+    border-radius: 40px;
+    background-color: vars.$colorWhite;
+    color: vars.$colorBlack;
+    line-height: 15px;
+    cursor: pointer;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        width: 100px;
+        height: 30px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        width: 120px;
+        height: 30px;
+    }
+}

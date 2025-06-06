@@ -1,0 +1,28 @@
+@use './color' as vars;
+
+%fontMain {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+%fontLogo {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    line-height: 39px;
+    color: vars.$colorAccent;
+}
+
+%fontMenu {
+    font-size: 16px;
+    line-height: 19px;
+    color: vars.$colorBlack;
+    text-decoration: none;
+}
+
+%fontSubmenu {
+    color: vars.$colorDark;
+    text-decoration: none;
+    line-height: 17px;
+}

@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '../helpers/breakpoints' as bp;
+
+.header {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1110px;
+    height: auto;
+    margin: 0 auto;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+        width: 992px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        width: 768px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        width: 100%;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        width: 100%;
+    }
+}
