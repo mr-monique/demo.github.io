@@ -1,5 +1,11 @@
 @use './color' as vars;
 
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 @mixin alingCenter {
     display: flex;
     align-items: center;

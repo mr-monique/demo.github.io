@@ -1,0 +1,39 @@
+@use 'sass:map';
+
+@use '../helpers/breakpoints' as bp;
+@use '../helpers/fonts';
+@use '../helpers/color' as vars;
+@use '../helpers/mixins' as mixin;
+@use '../helpers/buttons';
+
+.container__brands {
+    padding-top: 100px;
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: vars.$colorWhite;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__logo {
+        @include mixin.flexCenter;
+        padding: 35px 60px 35px 60px;
+        border: 1px solid vars.$colorGrey;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            padding: 10px;
+        }
+    }
+}
