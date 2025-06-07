@@ -36,3 +36,24 @@
 %heroText {
     line-height: 20px;
 }
+
+%titleProduct {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: vars.$colorBlack;
+}
+
+%nameProduct {
+    color: vars.$colorDark;
+    line-height: 141%;
+    text-align: center;
+}
+
+%priceProduct {
+    font-size: 21px;
+    line-height: 19px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    color: vars.$colorBlack;
+}

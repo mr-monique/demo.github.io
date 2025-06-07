@@ -1,9 +1,15 @@
 @use 'sass:map';
 @use '../helpers/breakpoints' as bp;
+@use '../helpers/color' as vars;
 
 .header {
     width: 100%;
     height: auto;
+}
+.main {
+    width: 100%;
+    height: auto;
+    background-color: vars.$colorGrey;
 }
 
 .container {

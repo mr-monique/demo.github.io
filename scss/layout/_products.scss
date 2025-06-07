@@ -1,0 +1,85 @@
+@use 'sass:map';
+
+@use '../helpers/breakpoints' as bp;
+@use '../helpers/fonts';
+@use '../helpers/color' as vars;
+@use '../helpers/mixins' as mixin;
+
+@use '../helpers/buttons';
+
+.title {
+    padding-top: 80px;
+    padding-bottom: 38px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        padding-top: 50px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        padding-top: 38px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__text {
+        @extend %titleProduct;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: vars.$colorWhite;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        &--image {
+            width: 125px;
+            height: auto;
+            padding: 25px 0;
+        }
+
+        &--title {
+            @extend %nameProduct;
+
+            @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+                padding: 0 30px;
+            }
+
+            @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+                padding: 0 10px;
+            }
+        }
+
+        &--price {
+            @extend %priceProduct;
+        }
+
+        &--cta {
+            @extend %productCta;
+        }
+    }
+}
