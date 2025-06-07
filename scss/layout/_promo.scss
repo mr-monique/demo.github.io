@@ -1,0 +1,79 @@
+@use 'sass:map';
+
+@use '../helpers/breakpoints' as bp;
+@use '../helpers/fonts';
+@use '../helpers/color' as vars;
+@use '../helpers/mixins' as mixin;
+@use '../helpers/buttons';
+
+.promo {
+    display: flex;
+    padding-top: 100px;
+    gap: 30px;
+    color: vars.$colorWhite;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        flex-direction: column;
+    }
+}
+
+.promo__content {
+    @include mixin.alingCenter;
+    background-color: vars.$colorAccent;
+    gap: 90px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'xl')) {
+        gap: 30px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        justify-content: space-between;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.promo__gifts {
+    padding-left: 40px;
+    padding-top: 35px;
+
+   @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+    padding-top: 10px;
+    padding-left: 10px;
+   }
+
+    &--title {
+        @extend %promoName;
+    }
+
+    &--text {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @extend %promoText;
+    }
+
+    &--mail {
+        @extend %promoMail;
+        margin-bottom: 35px;
+
+        &::placeholder {
+            padding-left: 25px;
+            color: vars.$colorGrey-mail;
+        }
+    }
+
+    &--cta {
+        @extend %promoCta;
+    }
+}
+
+.promo__banner {
+    padding-right: 45px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        padding-right: 0;
+    }
+}

@@ -57,3 +57,13 @@
     letter-spacing: 1.1px;
     color: vars.$colorBlack;
 }
+
+%promoName {
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: 700;
+}
+
+%promoText {
+    line-height: 141%;
+}
