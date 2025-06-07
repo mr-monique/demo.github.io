@@ -30,3 +30,14 @@
         height: 30px;
     }
 }
+
+%heroCta {
+    width: 170px;
+    height: 40px;
+    border: 2px solid vars.$colorWhite;
+    border-radius: 40px;
+    background-color: vars.$colorAccent;
+    color: vars.$colorWhite;
+    line-height: 15px;
+    letter-spacing: 0.7px;
+}

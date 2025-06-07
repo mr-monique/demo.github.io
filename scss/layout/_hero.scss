@@ -1,0 +1,87 @@
+@use 'sass:map';
+
+@use '../helpers/breakpoints' as bp;
+@use '../helpers/fonts';
+@use '../helpers/color' as vars;
+@use '../helpers/mixins' as mixin;
+
+@use '../helpers/buttons';
+@use '../helpers/circle';
+
+.section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: vars.$colorAccent;
+    color: vars.$colorWhite;
+
+    &__content {
+        @include mixin.alingCenter;
+        justify-content: space-between;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            @include mixin.displayColumn;
+        }
+    }
+}
+
+.hero {
+    padding-top: 192px;
+    padding-bottom: 193px;
+    position: relative;
+    z-index: 10;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        padding: 120px 0;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        padding: 80px 0;
+    }
+
+    &__title {
+        @extend %heroTitle;
+        padding-bottom: 50px;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            font-size: 28px;
+            padding-bottom: 35px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__text {
+        @extend %heroText;
+        padding-bottom: 30px;
+    }
+
+    &__cta {
+        @extend %heroCta;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            width: 140px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            width: 100px;
+            height: 30px;
+        }
+    }
+}
+
+.hero__inner {
+    @extend %heroCircle;
+
+    &--image {
+        position: absolute;
+        z-index: 5;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+            width: 60%;
+        }
+    }
+}

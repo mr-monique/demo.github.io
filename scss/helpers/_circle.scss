@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use './breakpoints' as bp;
+@use './fonts';
+@use './color' as vars;
+
+
+%heroCircle {
+    overflow: hidden;
+    position: absolute;
+    width: fit-content;
+    width: 850px;
+    height: 850px;
+    background-color: vars.$colorPink;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 175px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+        width: 700px;
+        height: 700px;
+        right: 50px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+        width: 500px;
+        height: 500px;
+        right: 0;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+        width: 330px;
+        height: 330px;
+        right: 25px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        background-color: vars.$colorPink-white;
+        border-radius: 50%;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
+            width: 550px;
+            height: 550px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            width: 280px;
+            height: 280px;
+        }
+    }
+}
