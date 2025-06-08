@@ -1,0 +1,80 @@
+@use 'sass:map';
+
+@use '../helpers/breakpoints' as bp;
+@use '../helpers/fonts';
+@use '../helpers/color' as vars;
+@use '../helpers/mixins' as mixin;
+
+.footer__container {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.categories {
+    position: relative;
+
+    &::after {
+        @include mixin.footerLine;
+    }
+}
+
+.categories__title {
+    @extend %footerTitle;
+    padding-bottom: 55px;
+}
+
+.footmenu__link {
+    @extend %footerMenu;
+    padding-bottom: 60px;
+}
+
+.footer__line {
+    position: relative;
+
+    &::after {
+        @include mixin.borderLine;
+    }
+}
+
+.container__body {
+    @include mixin.alingCenter;
+    justify-content: space-between;
+    padding-top: 97px;
+    padding-bottom: 38px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+
+    &__icons {
+        width: 22px;
+        height: 22px;
+        padding: 12px;
+        border: 2px solid vars.$colorAccent;
+        border-radius: 50%;
+    }
+}
+
+.legal {
+    width: 100%;
+    height: auto;
+    background-color: vars.$colorGrey;
+}
+
+.copyright {
+    @include mixin.alingCenter;
+    justify-content: space-between;
+    padding: 25px 0;
+
+    &__text {
+        @extend %copyrightFont;
+    }
+
+    &__link {
+        @extend %copyrightFont;
+        text-decoration: none;
+    }
+}

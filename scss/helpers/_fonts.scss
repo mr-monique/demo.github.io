@@ -67,3 +67,22 @@
 %promoText {
     line-height: 141%;
 }
+
+%footerTitle {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 141%;
+}
+
+%footerMenu {
+    font-size: 12px;
+    line-height: 28px;
+    color: vars.$colorGrey-dark;
+    text-decoration: none;
+}
+
+%copyrightFont {
+    font-size: 12px;
+    line-height: 14px;
+    color: vars.$colorGrey-dark;
+}
