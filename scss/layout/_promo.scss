@@ -33,6 +33,7 @@
     @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
         flex-direction: column;
         gap: 10px;
+        padding: 15px 0;
     }
 }
 

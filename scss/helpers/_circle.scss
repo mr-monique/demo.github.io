@@ -15,24 +15,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 175px;
+    top: -110px;
+    right: -1000px;
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
         width: 700px;
         height: 700px;
-        right: 50px;
+        right: -700px;
     }
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'md')) {
         width: 500px;
         height: 500px;
-        right: 0;
+        top: -65px;
+        right: -135px;
     }
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
         width: 330px;
         height: 330px;
-        right: 25px;
+        top: 0;
+        right: -30px;
     }
 
     &::after {

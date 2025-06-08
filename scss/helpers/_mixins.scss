@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use '../helpers/breakpoints' as bp;
 @use './color' as vars;
 
 @mixin flexCenter {
@@ -37,6 +39,11 @@
     height: 1px;
     top: 70px;
     background-color: vars.$colorGrey;
+
+        @media (max-width: map.get(bp.$grid-breakpoints, 'sm')) {
+            left: 0;
+        }
+
 }
 
 @mixin borderLine {

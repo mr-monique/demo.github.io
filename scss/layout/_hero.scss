@@ -31,10 +31,9 @@
 }
 
 .hero {
+    position: relative;
     padding-top: 192px;
     padding-bottom: 193px;
-    position: relative;
-    z-index: 10;
 
     @media (max-width: map.get(bp.$grid-breakpoints, 'lg')) {
         padding: 120px 0;
@@ -79,6 +78,11 @@
             height: 30px;
         }
     }
+}
+
+.hero__main {
+    position: relative;
+    z-index: 10;
 }
 
 .hero__inner {

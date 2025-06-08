@@ -215,27 +215,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 175px;
+  top: -110px;
+  right: -1000px;
 }
 @media (max-width: 1014px) {
   .hero__inner {
     width: 700px;
     height: 700px;
-    right: 50px;
+    right: -700px;
   }
 }
 @media (max-width: 790px) {
   .hero__inner {
     width: 500px;
     height: 500px;
-    right: 0;
+    top: -65px;
+    right: -135px;
   }
 }
 @media (max-width: 397px) {
   .hero__inner {
     width: 330px;
     height: 330px;
-    right: 25px;
+    top: 0;
+    right: -30px;
   }
 }
 .hero__inner::after {
@@ -431,10 +434,9 @@ body {
 }
 
 .hero {
+  position: relative;
   padding-top: 192px;
   padding-bottom: 193px;
-  position: relative;
-  z-index: 10;
 }
 @media (max-width: 1014px) {
   .hero {
@@ -478,6 +480,11 @@ body {
     width: 100px;
     height: 30px;
   }
+}
+
+.hero__main {
+  position: relative;
+  z-index: 10;
 }
 
 .hero__inner--image {
@@ -589,6 +596,7 @@ body {
   .promo__content {
     flex-direction: column;
     gap: 10px;
+    padding: 15px 0;
   }
 }
 
@@ -665,6 +673,13 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
+@media (max-width: 790px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    padding-top: 10px;
+    text-align: center;
+  }
+}
 
 .categories {
   position: relative;
@@ -677,9 +692,19 @@ body {
   top: 70px;
   background-color: #EFEFEF;
 }
+@media (max-width: 397px) {
+  .categories::after {
+    left: 0;
+  }
+}
 
 .categories__title {
   padding-bottom: 55px;
+}
+@media (max-width: 397px) {
+  .categories__title {
+    text-align: center;
+  }
 }
 
 .footmenu__link {
@@ -710,6 +735,12 @@ body {
   display: flex;
   gap: 20px;
 }
+@media (max-width: 397px) {
+  .social {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 .social__icons {
   width: 22px;
   height: 22px;
@@ -729,6 +760,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 25px 0;
+}
+@media (max-width: 397px) {
+  .copyright {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 .copyright__link {
   text-decoration: none;
