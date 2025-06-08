@@ -692,7 +692,7 @@ body {
   top: 70px;
   background-color: #EFEFEF;
 }
-@media (max-width: 397px) {
+@media (max-width: 790px) {
   .categories::after {
     left: 0;
   }
